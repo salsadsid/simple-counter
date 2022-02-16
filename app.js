@@ -1,17 +1,20 @@
 document.getElementById('display').value = "0";
-document.getElementById('plus').addEventListener('click', function () {
+function counter(isAdd) {
     const displayField = document.getElementById('display');
     let count = parseInt(displayField.value);
-    displayField.value = count + 1;
-})
-document.getElementById('minus').addEventListener('click', function () {
-    const displayField = document.getElementById('display');
-    let count = parseInt(displayField.value);
-
-    if (count == 0) {
-        displayField.value = "0";
+    if (isAdd) {
+        displayField.value = count + 1;
     }
-    else {
+    else if (count != 0) {
         displayField.value = count - 1;
     }
+}
+document.getElementById('plus').addEventListener('click', function () {
+    counter(true)
+})
+document.getElementById('minus').addEventListener('click', function () {
+    counter(false);
+})
+document.getElementById('reset').addEventListener('click', function () {
+    document.getElementById('display').value = "0";
 })

@@ -14,12 +14,15 @@
 <body>
     <h1 class="text-center fs-2 mt-5">Counter</h1>
 
-    <div class="input-group container">
-        <div class="col-4 input-group ">
-            <button class="btn btn-primary fs-1 fw-bold" id="minus">-</button>
-            <textarea id="display" class="form-control fw-bold fs-1 text-success text-center"
+    <div class="input-group col-12 mx-auto">
+        <div class="input-group flex justify-content-center">
+            <button class="btn btn-danger fs-1 fw-bold" id="minus">-</button>
+            <textarea id="display" class="fs-2 border border-3 rounded-3 text-success text-center"
                 aria-label="With textarea"></textarea>
-            <button class="btn btn-danger fs-1 fw-bold" id="plus">+</button>
+            <button class="btn btn-success fs-1 fw-bold" id="plus">+</button>
+        </div>
+        <div class="text-center container mx-auto mt-3">
+            <button id="reset" class="btn btn-primary fw-bold fs-3"> Reset</button>
         </div>
     </div>
     <script src="./app.js"></script>
